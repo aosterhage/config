@@ -1,0 +1,176 @@
+{
+    // Workbench
+    "workbench.colorTheme": "onehalf-dark",
+    "workbench.sideBar.location": "right",
+
+    // Editor
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+    "editor.peekWidgetDefaultFocus": "editor",
+
+    // Clang-Format
+    "C_Cpp.clang_format_path": "C:\\grmn\\prj\\tools\\programs\\scoop\\apps\\llvm\\current\\bin\\clang-format.exe",
+
+    // Git
+    "git.enabled": false,
+    "[git-commit]": {
+        // wordWrap doesn't support hard wrapping yet (inserting a newline)
+        // "editor.wordWrap":"wordWrapColumn",
+        // "editor.wordWrapColumn": 72,
+        "editor.rulers": [ 50, 72 ],                    // show rulers at 50 characters for commit summary and 72 characters for commit body
+    },
+
+    // Vim
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": true,
+    "vim.foldfix": true,
+    "vim.handleKeys": {
+        "<C-v>": true,
+        "<C-d>": true,
+        "<C-u>": true,
+        "<C-r>": true,
+    },
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        // Splits
+        {
+            "before": ["<leader>", "s", "v"],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
+        },
+        {
+            "before": ["<leader>", "s", "h"],
+            "commands": [
+                "workbench.action.splitEditorOrthogonal"
+            ]
+        },
+
+        // Files
+        {
+            "before": ["<leader>", "f", "s"],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": ["<leader>", "f", "o"],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": ["<leader>", "f", "n"],
+            "commands": [
+                "workbench.action.files.newUntitledFile"
+            ]
+        },
+
+        // Tabs
+        {
+            "before": ["<leader>", "t", "p"],
+            "commands": [
+                "workbench.action.previousEditorInGroup"
+            ]
+        },
+        {
+            "before": ["<leader>", "t", "n"],
+            "commands": [
+                "workbench.action.nextEditorInGroup"
+            ]
+        },
+        {
+            "before": ["<leader>", "t", "f"],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ]
+        },
+        {
+            "before": ["<leader>", "t", "k"],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+
+        // Project
+        {
+            "before": ["<leader>", "p", "s"],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+        {
+            "before": ["<leader>", "g", "e"],
+            "commands": [
+                "workbench.action.focusActiveEditorGroup"
+            ]
+        },
+
+        // Navigation
+        {
+            "before": ["<leader>", "g", "g"],
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        },
+        {
+            "before": ["<leader>", "g", "d"],
+            "commands": [
+                "editor.action.revealDeclaration"
+            ]
+        },
+        {
+            "before": ["<leader>", "g", "p"],
+            "commands": [
+                "editor.action.peekDefinition"
+            ]
+        },
+        {
+            "before": ["<leader>", "g", "l"],
+            "commands": [
+                "editor.action.peekDeclaration"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Project
+        {
+            "before": ["<leader>", "p", "s"],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        },
+
+    ],
+    "vim.surround": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": false,
+    "vim.visualstar": true,
+
+    // C/C++
+    "[c]":{
+        "editor.formatOnSave": false,                   // don't format the document on save
+        "editor.rulers": [ 120 ],                       // show a ruler line where clang-format will wrap
+        "editor.suggest.insertMode": "insert",          // don't overwrite text to the right of completions
+        "editor.semanticHighlighting.enabled": true,    // color more things
+        "editor.wordBasedSuggestions": false,           // disable dictionary word suggestions
+    },
+    "[cpp]": {
+        "editor.formatOnSave": false,                   // don't format the document on save
+        "editor.rulers": [ 120 ],                       // show a ruler line where clang-format will wrap
+        "editor.suggest.insertMode": "insert",          // don't overwrite text to the right of completions
+        "editor.semanticHighlighting.enabled": true,    // color more things
+        "editor.wordBasedSuggestions": false,
+        "editor.defaultFormatter": "ms-vscode.cpptools", // disable dictionary word suggestions
+    },
+
+    "privateExtensions.registries": [
+        {
+            "name": "Garmin",
+            "registry": "https://mirrors.garmin.com/npm-vscode"
+        }
+    ],
+}
